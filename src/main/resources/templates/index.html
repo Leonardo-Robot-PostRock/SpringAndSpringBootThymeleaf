@@ -5,8 +5,17 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Inicio</h1>
-    <p th:text="${message}"></p>
-    <p th:text="${greeting}"></p>
+<h1>Inicio</h1>
+<p th:text="${message}"></p>
+<p th:text="${greeting}"></p>
+<br/>
+
+    Nombre: <span th:text="${person.name}">Mostrar Nombre</span>
+    <br/>
+    Apellido: <span th:text="${person.surname}">Mostrar apellido</span>
+    <br/>
+    Email: <span th:text="${person.email}">Mostrar Email</span>
+    <br/>
+    Teléfono: <span th:text="${person.phone}">Mostrar Teléfono</span>
 </body>
 </html>
