@@ -9,13 +9,25 @@
 <p th:text="${message}"></p>
 <p th:text="${greeting}"></p>
 <br/>
+<div th:if="${persons != null and !persons.empty}">
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+        </tr>
 
-    Nombre: <span th:text="${person.name}">Mostrar Nombre</span>
-    <br/>
-    Apellido: <span th:text="${person.surname}">Mostrar apellido</span>
-    <br/>
-    Email: <span th:text="${person.email}">Mostrar Email</span>
-    <br/>
-    Teléfono: <span th:text="${person.phone}">Mostrar Teléfono</span>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.name}">Mostrar Nombre</td>
+            <td th:text="${person.surname}">Mostrar apellido</td>
+            <td th:text="${person.email}">Mostrar Email</td>
+            <td th:text="${person.phone}">Mostrar Teléfono</td>
+        </tr>
+    </table>
+</div>
+<div th:if="${persons == null or persons.empty}">
+    La lista de personas está vacía
+</div>
 </body>
 </html>
