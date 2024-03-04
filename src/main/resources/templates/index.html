@@ -26,6 +26,8 @@
             <td th:text="${person.phone}">Mostrar Teléfono</td>
             <!-- Path variable -->
             <td><a th:href="@{/edit/} + ${person.idPerson}" th:text="Editar"></a></td> 
+            <!-- Query parameter -->
+            <td><a th:href="@{/delete(idPerson=${person.idPerson})}" th:text="Eliminar"></a></td> 
         </tr>
     </table>
 </div>

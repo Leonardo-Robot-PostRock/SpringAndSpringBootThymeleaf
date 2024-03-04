@@ -45,5 +45,10 @@ public class StartupController {
         model.addAttribute("person", person);
         return "modify";
     }
-
+    
+    @GetMapping("/delete")
+    public String delete(Person person){
+        servicePerson.delete(person);
+        return "redirect:/";
+    }
 }
