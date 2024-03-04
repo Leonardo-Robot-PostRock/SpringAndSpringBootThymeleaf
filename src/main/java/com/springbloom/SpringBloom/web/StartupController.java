@@ -38,4 +38,12 @@ public class StartupController {
         servicePerson.save(person);
         return "redirect:/";
     }
+
+    @GetMapping("/edit/{idPerson}")
+    public String edit(Person person, Model model) {
+        person = servicePerson.findPerson(person);
+        model.addAttribute("person", person);
+        return "modify";
+    }
+
 }
