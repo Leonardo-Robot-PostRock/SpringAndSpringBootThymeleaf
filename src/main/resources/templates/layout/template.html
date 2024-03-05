@@ -11,7 +11,12 @@
         </header>
 
         <footer th:fragment="footer">
-            <p>[[#{template.footer}]] <a href="https://leonardopuebla.netlify.app">[[#{template.name}]]</a></p>
+            <div>
+                <br/>
+                <a th:href="@{/(lang=es)}">ES</a> |
+                <a th:href="@{/(lang=en)}">EN</a> | 
+                <span>[[#{template.footer}]] <a href="https://leonardopuebla.netlify.app">[[#{template.name}]]</a></span>
+            </div>
         </footer>
     </body>
 </html>
