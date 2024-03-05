@@ -16,18 +16,23 @@ Any value defined here will override the pom.xml file value but is only applicab
         <netbeans.compile.on.save>all</netbeans.compile.on.save>
     </properties>
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>Agregar</word>
         <word>Apellido</word>
         <word>Clientes</word>
+        <word>Correo</word>
         <word>Crear</word>
         <word>Datos</word>
         <word>Derechos</word>
         <word>Editar</word>
         <word>Eliminar</word>
         <word>está</word>
+        <word>formato</word>
+        <word>Guardar</word>
         <word>Inicio</word>
         <word>lista</word>
         <word>Mostrar</word>
         <word>Nombre</word>
+        <word>obligatorio</word>
         <word>Plantilla</word>
         <word>por</word>
         <word>Realizado</word>
@@ -35,5 +40,6 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>Reservados</word>
         <word>Teléfono</word>
         <word>vacía</word>
+        <word>válido</word>
     </spellchecker-wordlist>
 </project-shared-configuration>

@@ -17,14 +17,14 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPerson;
 
-    @NotBlank(message = "El nombre es obligatorio")
+    @NotBlank
     private String name;
 
-    @NotBlank(message = "El apellido es obligatorio")
+    @NotBlank
     private String surname;
     
-    @NotBlank(message = "El email es obligatorio")
-    @Email(message = "Debe ser un email con formato válido")
+    @NotBlank
+    @Email
     private String email;
     
     private String phone;

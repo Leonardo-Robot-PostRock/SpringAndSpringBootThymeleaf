@@ -7,11 +7,11 @@
     </head>
     <body>
         <header th:fragment="header">
-            <h1>Control de Clientes</h1>
+            <h1 th:text="#{template.title}"></h1>
         </header>
-        
+
         <footer th:fragment="footer">
-            <p>Realizado por <a href="https://leonardopuebla.netlify.app">Leonardo Puebla</a></p>
+            <p>[[#{template.footer}]] <a href="https://leonardopuebla.netlify.app">[[#{template.name}]]</a></p>
         </footer>
     </body>
 </html>

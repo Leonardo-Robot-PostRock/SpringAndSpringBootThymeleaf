@@ -7,27 +7,27 @@
     </head>
     <body>
         <header th:replace="layout/template :: header"></header>
-        <h2>Datos de la Persona</h2>
-        <a th:href="@{/}">Regresar</a>
+        <h2>[[#{person.form}]]</h2>
+        <a th:href="@{/}">[[#{action.goBack}]]</a>
         <form th:action="@{/save}" method="post" th:object="${person}">
             <input type="hidden" name="idPerson" th:field="*{idPerson}"/>
 
-            <label for="name">Nombre:</label>
+            <label for="name">[[#{person.name}]]:</label>
             <input type="text" name="name" th:field="*{name}"/>
             <span th:if="${#fields.hasErrors('name')}" th:errors='*{name}'>Error Nombre</span>
 
-            <label for="surname">Apellido:</label>
+            <label for="surname">[[#{person.surname}]]:</label>
             <input type="text" name="surname" th:field="*{surname}"/>
             <span th:if="${#fields.hasErrors('surname')}" th:errors='*{surname}'>Error Apellido</span>
 
-            <label for="email">Email:</label>
+            <label for="email">[[#{person.email}]]:</label>
             <input type="text" name="email" th:field="*{email}"/>
             <span th:if="${#fields.hasErrors('email')}" th:errors='*{email}'>Error Apellido</span>
 
-            <label for="phone">Teléfono:</label>
+            <label for="phone">[[#{person.phone}]]:</label>
             <input type="text" name="phone" th:field="*{phone}"/>
 
-            <input type="submit" name="save" value="Guardar" />
+            <input type="submit" name="save" th:value="#{action.save}" />
         </form>
 
         <footer th:replace="layout/template :: footer"></footer>
