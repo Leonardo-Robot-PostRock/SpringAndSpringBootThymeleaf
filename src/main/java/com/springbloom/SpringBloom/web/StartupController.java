@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
 
 @Controller
 @Slf4j
@@ -34,7 +36,11 @@ public class StartupController {
     }
 
     @PostMapping("/save")
-    public String save(Person person) {
+    public String save(@Validated Person person, Errors errors) {
+        if (errors.hasErrors()) {
+            return "modify";
+        }
+        
         servicePerson.save(person);
         return "redirect:/";
     }
@@ -45,9 +51,9 @@ public class StartupController {
         model.addAttribute("person", person);
         return "modify";
     }
-    
+
     @GetMapping("/delete")
-    public String delete(Person person){
+    public String delete(Person person) {
         servicePerson.delete(person);
         return "redirect:/";
     }
