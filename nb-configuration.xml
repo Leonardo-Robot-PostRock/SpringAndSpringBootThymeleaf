@@ -16,30 +16,84 @@ Any value defined here will override the pom.xml file value but is only applicab
         <netbeans.compile.on.save>all</netbeans.compile.on.save>
     </properties>
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>acceder</word>
+        <word>acceso</word>
+        <word>acción</word>
+        <word>administradores</word>
+        <word>administrar</word>
         <word>Agregar</word>
+        <word>alimenta</word>
         <word>Apellido</word>
+        <word>aplicación</word>
+        <word>autenticación</word>
+        <word>básicos</word>
+        <word>Cadena</word>
+        <word>caso</word>
         <word>Clientes</word>
+        <word>configurar</word>
+        <word>construye</word>
+        <word>contraseñas</word>
         <word>Correo</word>
+        <word>Crea</word>
         <word>Crear</word>
+        <word>cual</word>
+        <word>código</word>
         <word>Datos</word>
+        <word>Denegado</word>
         <word>Derechos</word>
+        <word>detalles</word>
+        <word>detrás</word>
         <word>Editar</word>
+        <word>ejecutar</word>
         <word>Eliminar</word>
+        <word>encarga</word>
+        <word>encriptadas</word>
+        <word>errores</word>
+        <word>esta</word>
+        <word>este</word>
         <word>está</word>
         <word>formato</word>
+        <word>gestionar</word>
         <word>Guardar</word>
         <word>Inicio</word>
+        <word>las</word>
         <word>lista</word>
+        <word>lógica</word>
+        <word>manejo</word>
+        <word>mediante</word>
         <word>Mostrar</word>
+        <word>método</word>
+        <word>métodos</word>
+        <word>niveles</word>
         <word>Nombre</word>
+        <word>objeto</word>
         <word>obligatorio</word>
+        <word>permiso</word>
+        <word>permite</word>
         <word>Plantilla</word>
+        <word>políticas</word>
         <word>por</word>
+        <word>pueden</word>
+        <word>página</word>
+        <word>páginas</word>
+        <word>que</word>
+        <word>raíz</word>
         <word>Realizado</word>
         <word>Regresar</word>
         <word>Reservados</word>
+        <word>resumen</word>
+        <word>se</word>
+        <word>servicio</word>
+        <word>también</word>
         <word>Teléfono</word>
+        <word>tienes</word>
+        <word>un</word>
+        <word>una</word>
+        <word>usuario</word>
+        <word>usuarios</word>
+        <word>utilizando</word>
         <word>vacía</word>
+        <word>ver</word>
         <word>válido</word>
     </spellchecker-wordlist>
 </project-shared-configuration>
