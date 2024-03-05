@@ -55,6 +55,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>formato</word>
         <word>gestionar</word>
         <word>Guardar</word>
+        <word>hizo</word>
         <word>Inicio</word>
         <word>las</word>
         <word>lista</word>

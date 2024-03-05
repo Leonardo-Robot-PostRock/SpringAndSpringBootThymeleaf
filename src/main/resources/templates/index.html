@@ -6,7 +6,7 @@
     </head>
     <body>
         <header th:insert="~{layout/template :: header}"></header>
-        <a th:href="@{/add}">[[#{person.create}]]</a>
+        <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/add}">[[#{person.create}]]</a>
         <br/>
         <div th:if="${persons != null and !persons.empty}">
             <table border="1">
@@ -15,8 +15,8 @@
                     <th>[[#{person.surname}]]</th>
                     <th>[[#{person.email}]]</th>
                     <th>[[#{person.phone}]]</th>
-                    <th>[[#{action.edit}]]</th>
-                    <th>[[#{action.delete}]]</th>
+                    <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{action.edit}]]</th>
+                    <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{action.delete}]]</th>
                 </tr>
 
                 <tr th:each="person : ${persons}">
@@ -25,9 +25,9 @@
                     <td th:text="${person.email}">Mostrar Email</td>
                     <td th:text="${person.phone}">Mostrar Teléfono</td>
                     <!-- Path variable -->
-                    <td><a th:href="@{/edit/} + ${person.idPerson}">[[#{action.edit}]]</a></td> 
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/edit/} + ${person.idPerson}">[[#{action.edit}]]</a></td> 
                     <!-- Query parameter -->
-                    <td><a th:href="@{/delete(idPerson=${person.idPerson})}">[[#{action.delete}]]</a></td> 
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/delete(idPerson=${person.idPerson})}">[[#{action.delete}]]</a></td> 
                 </tr>
             </table>
         </div>
