@@ -5,7 +5,7 @@
         <title>Inicio</title>
     </head>
     <body>
-        <header th:replace="layout/template :: header"></header>
+        <header th:insert="~{layout/template :: header}"></header>
         <a th:href="@{/add}">[[#{person.create}]]</a>
         <br/>
         <div th:if="${persons != null and !persons.empty}">
@@ -35,6 +35,6 @@
             [[#{person.empty-list}]]
         </div>
 
-        <footer th:replace="layout/template :: footer"></footer>
+        <footer th:insert="~{layout/template :: footer}"></footer>
     </body>
 </html>
