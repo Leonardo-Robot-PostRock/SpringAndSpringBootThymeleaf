@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Inicio</title>
-</head>
-<body>
-<h1>Inicio</h1>
-<a th:href="@{/add}">Crear Persona</a>
-<br/>
-<div th:if="${persons != null and !persons.empty}">
-    <table border="1">
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </tr>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <header th:replace="layout/template :: header"></header>
+        <a th:href="@{/add}">Crear Persona</a>
+        <br/>
+        <div th:if="${persons != null and !persons.empty}">
+            <table border="1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
 
-        <tr th:each="person : ${persons}">
-            <td th:text="${person.name}">Mostrar Nombre</td>
-            <td th:text="${person.surname}">Mostrar apellido</td>
-            <td th:text="${person.email}">Mostrar Email</td>
-            <td th:text="${person.phone}">Mostrar Teléfono</td>
-            <!-- Path variable -->
-            <td><a th:href="@{/edit/} + ${person.idPerson}" th:text="Editar"></a></td> 
-            <!-- Query parameter -->
-            <td><a th:href="@{/delete(idPerson=${person.idPerson})}" th:text="Eliminar"></a></td> 
-        </tr>
-    </table>
-</div>
-<div th:if="${persons == null or persons.empty}">
-    La lista de personas está vacía
-</div>
-</body>
+                <tr th:each="person : ${persons}">
+                    <td th:text="${person.name}">Mostrar Nombre</td>
+                    <td th:text="${person.surname}">Mostrar apellido</td>
+                    <td th:text="${person.email}">Mostrar Email</td>
+                    <td th:text="${person.phone}">Mostrar Teléfono</td>
+                    <!-- Path variable -->
+                    <td><a th:href="@{/edit/} + ${person.idPerson}" th:text="Editar"></a></td> 
+                    <!-- Query parameter -->
+                    <td><a th:href="@{/delete(idPerson=${person.idPerson})}" th:text="Eliminar"></a></td> 
+                </tr>
+            </table>
+        </div>
+        <div th:if="${persons == null or persons.empty}">
+            La lista de personas está vacía
+        </div>
+        
+        <footer th:replace="layout/template :: footer"></footer>
+    </body>
 </html>

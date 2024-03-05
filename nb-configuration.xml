@@ -17,8 +17,10 @@ Any value defined here will override the pom.xml file value but is only applicab
     </properties>
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
         <word>Apellido</word>
+        <word>Clientes</word>
         <word>Crear</word>
         <word>Datos</word>
+        <word>Derechos</word>
         <word>Editar</word>
         <word>Eliminar</word>
         <word>está</word>
@@ -26,7 +28,11 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>lista</word>
         <word>Mostrar</word>
         <word>Nombre</word>
+        <word>Plantilla</word>
+        <word>por</word>
+        <word>Realizado</word>
         <word>Regresar</word>
+        <word>Reservados</word>
         <word>Teléfono</word>
         <word>vacía</word>
     </spellchecker-wordlist>
