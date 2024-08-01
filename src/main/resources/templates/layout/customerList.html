@@ -16,7 +16,7 @@
                             <div th:if="${persons != null and !persons.empty}">
                                 <table class="table table-stryped">
                                     <thead class="thead-dark">
-                                        <tr>
+                                        <tr class="bg-dark">
                                             <th>#</th>
                                             <th th:text="#{person.name}">#</th>
                                             <th th:text="#{person.balance}">#</th>
@@ -55,6 +55,22 @@
                             </div>
                             <div class="text-center p-2" th:if="${persons == null or persons.isEmpty()}">
                                 <span th:text="#{person.empty-list}">[[#{person.empty-list}]]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center bg-danger text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{person.totalBalance}">Saldo Total</h3>
+                                <h4 class="display-4">
+                                    [[${formattedTotalBalance}]]
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="card text-center bg-success text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{person.totalCustomers}">Total Clientes</h3>
+                                <h4 class="display-4"><i class="fas fa-users"></i> [[${totalCustomers}]]</h4>
                             </div>
                         </div>
                     </div>

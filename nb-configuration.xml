@@ -58,6 +58,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>está</word>
         <word>formato</word>
         <word>formattedBalance</word>
+        <word>formattedTotalBalance</word>
         <word>gestionar</word>
         <word>Guardar</word>
         <word>hizo</word>
@@ -97,6 +98,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>también</word>
         <word>Teléfono</word>
         <word>tienes</word>
+        <word>totalCustomers</word>
         <word>un</word>
         <word>una</word>
         <word>usuario</word>
