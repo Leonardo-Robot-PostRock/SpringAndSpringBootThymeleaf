@@ -5,9 +5,49 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <section th:fragment="addCustomer" class="py-3 mb-4 bg-light">
-            
+        <section th:fragment="addCustomer">
+            <div id="addCustomer" class="modal fade" tabindex="-1" aria-labelledby="addCustomerLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="addCustomerLabel" th:text="#{action.add}">Agregar cliente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form th:action="@{/save}" th:object="${person}" method="POST" class="was-validated">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="my-2"for="name" th:text="#{person.name}">Nombre</label>
+                                        <input type="text" class="form-control" name="name" required="true" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="my-2"for="surname" th:text="#{person.surname}">Apellido</label>
+                                        <input type="text" class="form-control" name="surname" required="true" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="my-2"for="email" th:text="#{person.email}">Email</label>
+                                        <input type="text" class="form-control" name="email" required="true" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="my-2"for="phone" th:text="#{person.phone}">Teléfono</label>
+                                        <input type="text" class="form-control" name="phone" required="true" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="my-2"for="balance" th:text="#{person.balance}">Balance</label>
+                                        <input type="text" class="form-control" name="balance" required="true" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" type="submit" th:text="#{action.add}">Guardar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
     </body>
 </html>
