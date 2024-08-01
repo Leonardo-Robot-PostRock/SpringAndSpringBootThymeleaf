@@ -5,6 +5,11 @@
     </head>
     <body>
         <header th:insert="~{layout/template :: header}"></header>
+        <section th:insert="~{layout/addButtons :: addButtons}"></section>
+        <section th:insert="~{layout/addCustomer :: addCustomer}"></section>
+        <section th:insert="~{layout/customerList :: customerList}"></section>
+        <footer th:insert="~{layout/template :: footer}"></footer>
+
         <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/add}">[[#{person.create}]]</a>
         <br/>
         <div th:if="${persons != null and !persons.empty}">
@@ -34,6 +39,5 @@
             [[#{person.empty-list}]]
         </div>
 
-        <footer th:insert="~{layout/template :: footer}"></footer>
     </body>
 </html>

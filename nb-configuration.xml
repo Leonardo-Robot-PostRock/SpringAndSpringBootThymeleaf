@@ -27,9 +27,11 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>aplicación</word>
         <word>autenticación</word>
         <word>Bienvenido</word>
+        <word>botones</word>
         <word>básicos</word>
         <word>Cadena</word>
         <word>caso</word>
+        <word>Cliente</word>
         <word>Clientes</word>
         <word>configurar</word>
         <word>construye</word>
