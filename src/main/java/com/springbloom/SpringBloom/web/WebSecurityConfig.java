@@ -51,6 +51,8 @@ public class WebSecurityConfig {
 
         http
                 .authorizeHttpRequests(authorize -> authorize
+                .requestMatchers("/webjars/**").permitAll()
+                .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                 .requestMatchers("/edit/**", "/add/**", "/delete")
                 .hasRole("ADMIN")
                 .requestMatchers("/").hasAnyRole("ADMIN", "USER")
