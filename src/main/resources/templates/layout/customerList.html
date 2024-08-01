@@ -5,6 +5,61 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <section th:fragment="customerList" class="py-3 mb-4 bg-light"></section>
+        <section th:fragment="customerList" id="customers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>[[#{person.title-list}]]</h4>
+                            </div>
+                            <div th:if="${persons != null and !persons.empty}">
+                                <table class="table table-stryped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>#</th>
+                                            <th th:text="#{person.name}">#</th>
+                                            <th th:text="#{person.balance}">#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="person, iterStat : ${persons}">
+                                            <td>[[${iterStat.count}]]</td>
+                                            <td>[[${person.name} + ' ' + ${person.surname}]]</td>
+                                            <td>[[${person.formattedBalance}]]</td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" 
+                                                   th:href="@{/edit/} + ${person.idPerson}"
+                                                   class="btn btn-secondary"
+                                                   >
+                                                    <span style="font-size: 0.8em;">
+                                                        <i class="fas fa-edit"></i> [[#{action.edit}]]
+                                                    </span>
+
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" 
+                                                   th:href="@{/delete(idPerson=${person.idPerson})}"
+                                                   class="btn btn-danger"
+                                                   >
+                                                    <span style="font-size: 0.8em;">
+                                                        <i class="fas fa-trash"></i> [[#{action.delete}]]
+                                                    </span>
+
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${persons == null or persons.isEmpty()}">
+                                <span th:text="#{person.empty-list}">[[#{person.empty-list}]]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
