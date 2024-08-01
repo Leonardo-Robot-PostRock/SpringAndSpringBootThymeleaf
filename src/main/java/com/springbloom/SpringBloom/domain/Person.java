@@ -1,8 +1,7 @@
 package com.springbloom.SpringBloom.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -30,5 +29,9 @@ public class Person implements Serializable {
     private String phone;
     
     @NotNull
-    private Double saldo;
+    private Double balance;
+    
+    @Transient
+    private String formattedBalance;
+
 }
