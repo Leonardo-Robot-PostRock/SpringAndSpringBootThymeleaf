@@ -17,13 +17,13 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav">
                             <li class="nav-item px-2">
                                 <a th:href="@{/}" class="nav-link active" th:text="#{bar.title}">Inicio</a>
                             </li>
                         </ul>
-                        <ul sec:authorize="isAuthenticated()" class="navbar-nav ml-auto">
+                        <ul sec:authorize="isAuthenticated()" class="navbar-nav ms-auto">
                             <li class="nav-item mr-3">
                                 <a href="#" class="nav-link">
                                     <i class="fas fa-user"></i>
@@ -42,19 +42,32 @@
                     </div>
                 </div>
             </nav>
+            <section id="main-header" class="py-2 bg-secondary text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>
+                                <i class="fas fa-cog"></i> [[#{template.title}]]
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </header>
 
-        <footer th:fragment="footer">
-            <div>
-                <br/>
-                <a th:href="@{/(lang=es)}">ES</a> |
-                <a th:href="@{/(lang=en)}">EN</a> | 
-                <span>[[#{template.footer}]] <a href="https://leonardopuebla.netlify.app">[[#{template.name}]]</a></span>
-                <form method="POST" th:action="@{/logout}">
-                    <b>User:</b> <span sec:authentication="name">Usuario que hizo login</span>
-                    <b>Roles:</b> <span sec:authentication="principal.authorities"></span>
-                    <a href="#" onclick="this.parentNode.submit()">Logout</a>
-                </form>
+        <footer th:fragment="footer" class="bg-secondary text-white mt-5 p-5">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        <a th:href="@{/(lang=es)}" class="text-warning">ES</a> |
+                        <a th:href="@{/(lang=en)}" class="text-warning">EN</a> | 
+                        <span>[[#{template.footer}]] 
+                            &copy;<a href="https://leonardopuebla.netlify.app" class="text-warning text-decoration-none">
+                                [[#{template.name}]]
+                            </a>
+                        </span>
+                    </p>
+                </div>
             </div>
         </footer>
     </body>
