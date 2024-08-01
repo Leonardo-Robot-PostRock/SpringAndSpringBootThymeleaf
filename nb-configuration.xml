@@ -26,6 +26,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>Apellido</word>
         <word>aplicación</word>
         <word>autenticación</word>
+        <word>Bienvenido</word>
         <word>básicos</word>
         <word>Cadena</word>
         <word>caso</word>
@@ -56,6 +57,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>gestionar</word>
         <word>Guardar</word>
         <word>hizo</word>
+        <word>Incio</word>
         <word>Inicio</word>
         <word>las</word>
         <word>lista</word>
@@ -83,6 +85,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>Regresar</word>
         <word>Reservados</word>
         <word>resumen</word>
+        <word>Salir</word>
         <word>se</word>
         <word>servicio</word>
         <word>también</word>
