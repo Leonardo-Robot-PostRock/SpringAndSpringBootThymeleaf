@@ -2,6 +2,7 @@ package com.springbloom.SpringBloom.web;
 
 import com.springbloom.SpringBloom.domain.Person;
 import com.springbloom.SpringBloom.service.ServicePerson;
+import com.springbloom.SpringBloom.util.FormatUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -24,6 +25,10 @@ public class StartupController {
     @GetMapping("/")
     public String start(Model model, @AuthenticationPrincipal User user) {
         var persons = servicePerson.listPersons();
+        
+        for(Person person : persons){
+            person.setFormattedBalance(FormatUtil.formatCurrency(person.getBalance()));
+        }
         
         log.info("Ejecutando el controlador Spring MVC");
         log.info("usuario que hizo login: " + user);
