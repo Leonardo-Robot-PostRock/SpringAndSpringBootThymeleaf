@@ -10,34 +10,5 @@
         <section th:insert="~{layout/customerList :: customerList}"></section>
         <footer th:insert="~{layout/template :: footer}"></footer>
 
-        <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/add}">[[#{person.create}]]</a>
-        <br/>
-        <div th:if="${persons != null and !persons.empty}">
-            <table border="1">
-                <tr>
-                    <th>[[#{person.name}]]</th>
-                    <th>[[#{person.surname}]]</th>
-                    <th>[[#{person.email}]]</th>
-                    <th>[[#{person.phone}]]</th>
-                    <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{action.edit}]]</th>
-                    <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{action.delete}]]</th>
-                </tr>
-
-                <tr th:each="person : ${persons}">
-                    <td th:text="${person.name}">Mostrar Nombre</td>
-                    <td th:text="${person.surname}">Mostrar apellido</td>
-                    <td th:text="${person.email}">Mostrar Email</td>
-                    <td th:text="${person.phone}">Mostrar Teléfono</td>
-                    <!-- Path variable -->
-                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/edit/} + ${person.idPerson}">[[#{action.edit}]]</a></td> 
-                    <!-- Query parameter -->
-                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/delete(idPerson=${person.idPerson})}">[[#{action.delete}]]</a></td> 
-                </tr>
-            </table>
-        </div>
-        <div th:if="${persons == null or persons.empty}">
-            [[#{person.empty-list}]]
-        </div>
-
     </body>
 </html>
