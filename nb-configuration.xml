@@ -42,6 +42,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>cual</word>
         <word>código</word>
         <word>Datos</word>
+        <word>DecimalFormat</word>
         <word>Denegado</word>
         <word>Derechos</word>
         <word>detalles</word>
@@ -56,11 +57,13 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>este</word>
         <word>está</word>
         <word>formato</word>
+        <word>formattedBalance</word>
         <word>gestionar</word>
         <word>Guardar</word>
         <word>hizo</word>
         <word>Incio</word>
         <word>Inicio</word>
+        <word>iterStat</word>
         <word>las</word>
         <word>lista</word>
         <word>lógica</word>
@@ -87,6 +90,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>Regresar</word>
         <word>Reservados</word>
         <word>resumen</word>
+        <word>Saldo</word>
         <word>Salir</word>
         <word>se</word>
         <word>servicio</word>
