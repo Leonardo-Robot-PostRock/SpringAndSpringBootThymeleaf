@@ -28,4 +28,7 @@ public class Person implements Serializable {
     private String email;
     
     private String phone;
+    
+    @NotNull
+    private Double saldo;
 }
